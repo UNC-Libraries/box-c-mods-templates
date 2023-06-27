@@ -64,4 +64,5 @@
     <mods:identifier displayLabel="Collection Number" type="local" />
     <mods:note />
     <mods:accessCondition displayLabel="License" type="use and reproduction" xlink:href="https://creativecommons.org/licenses/by-nc-sa/4.0/" />
+    <mods:identifier displayLabel="Digital Folder Number" type="local" />
 </mods:mods>
