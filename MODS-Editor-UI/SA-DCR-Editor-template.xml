@@ -49,7 +49,7 @@
     </mods:titleInfo>
     <mods:abstract />
     <mods:note displayLabel="Place of Interview" />
-    <mods:note displayLabel="Interviewee Keywords and Topics" />
+    <mods:note displayLabel="Keywords" />
     <mods:note displayLabel="Locations" />
     <mods:subject>
         <mods:topic />

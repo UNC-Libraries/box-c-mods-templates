@@ -58,7 +58,7 @@
 	</mods:titleInfo>','')}}
 	{{forNonBlank(cells['Description'].value,v,'<mods:abstract>' + v.escape('xml') + '</mods:abstract>','')}}
 	{{forNonBlank(cells['Place of Interview'].value,v,'<mods:note displayLabel="Place of Interview">' + v.escape('xml') + '</mods:note>','')}}
-	{{forNonBlank(cells['Interviewee Keywords and Topics'].value,v,'<mods:note displayLabel="Interviewee Keywords and Topics">' + v.escape('xml') + '</mods:note>','')}}
+	{{forNonBlank(cells['Keywords'].value,v,'<mods:note displayLabel="Keywords">' + v.escape('xml') + '</mods:note>','')}}
 	{{forNonBlank(cells['Locations'].value,v,'<mods:note displayLabel="Locations">' + v.escape('xml') + '</mods:note>','')}}
 	{{forNonBlank(cells['Subjects'].value,v,'<mods:subject>
 		<mods:topic>' + v.escape('xml') + '</mods:topic>
