@@ -58,7 +58,7 @@
 	</mods:titleInfo>','')}}
 	{{forNonBlank(cells['Description'].value,v,'<mods:abstract>' + v.escape('xml') + '</mods:abstract>','')}}
 	{{forNonBlank(cells['Place of Interview'].value,v,'<mods:note displayLabel="Place of Interview">' + v.escape('xml') + '</mods:note>','')}}
-	{{forNonBlank(cells['Interviewee Keywords and Topics'].value,v,'<mods:note displayLabel="Interviewee Keywords and Topics">' + v.escape('xml') + '</mods:note>','')}}
+	{{forNonBlank(cells['Keywords'].value,v,'<mods:note displayLabel="Keywords">' + v.escape('xml') + '</mods:note>','')}}
 	{{forNonBlank(cells['Locations'].value,v,'<mods:note displayLabel="Locations">' + v.escape('xml') + '</mods:note>','')}}
 	{{forNonBlank(cells['Subjects'].value,v,'<mods:subject>
 		<mods:topic>' + v.escape('xml') + '</mods:topic>
@@ -73,6 +73,9 @@
 	{{forNonBlank(cells['Collection Number'].value,v,'<mods:identifier displayLabel="Collection Number" type="local">' + v.escape('xml') + '</mods:identifier>','')}}
 	{{forNonBlank(cells['Notes'].value,v,'<mods:note>' + v.escape('xml') + '</mods:note>','')}}
 	{{forNonBlank(cells['Rights'].value,v,'<mods:accessCondition displayLabel="License" type="use and reproduction" xlink:href="https://creativecommons.org/licenses/by-nc-sa/4.0/">' + v.escape('xml') + '</mods:accessCondition>','')}}
+	{{forNonBlank(cells['Digital Folder number'].value,v,'<mods:identifier displayLabel="Digital Folder Number" type="local">' + v.escape('xml') + '</mods:identifier>','')}}
+	{{forNonBlank(cells['Language'].value.split('; '), v, forEach(v,w,'<mods:language><mods:languageTerm authority="iso639-2b" type="code">' + w.escape('xml') + '</mods:languageTerm></mods:language>').join(''), '')}}
+	<mods:typeOfResource>sound recording-nonmusical</mods:typeOfResource>
 </mods:mods>
 </datastream>
 </object>

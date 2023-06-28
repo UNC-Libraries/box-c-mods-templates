@@ -49,7 +49,7 @@
     </mods:titleInfo>
     <mods:abstract />
     <mods:note displayLabel="Place of Interview" />
-    <mods:note displayLabel="Interviewee Keywords and Topics" />
+    <mods:note displayLabel="Keywords" />
     <mods:note displayLabel="Locations" />
     <mods:subject>
         <mods:topic />
@@ -64,4 +64,9 @@
     <mods:identifier displayLabel="Collection Number" type="local" />
     <mods:note />
     <mods:accessCondition displayLabel="License" type="use and reproduction" xlink:href="https://creativecommons.org/licenses/by-nc-sa/4.0/" />
+    <mods:identifier displayLabel="Digital Folder Number" type="local" />
+    <mods:language>
+        <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+    </mods:language>
+    <mods:typeOfResource>sound recording-nonmusical</mods:typeOfResource>
 </mods:mods>
