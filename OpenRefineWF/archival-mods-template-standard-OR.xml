@@ -13,9 +13,10 @@
 	</mods:titleInfo>','')}}
 	{{forNonBlank(cells['Digital Folder number'].value,v,'<mods:identifier displayLabel="Digital Folder Number" type="local">' + v.escape('xml') + '</mods:identifier>','')}}
 	{{forNonBlank(cells['Accession Number'].value,v,'<mods:identifier displayLabel="Accession Number" type="local">' + v.escape('xml') + '</mods:identifier>','')}}
-	{{forNonBlank(cells['Year'].value,v,'<mods:originInfo>
-		<mods:dateCreated encoding="edtf">' + v.escape('xml') + '</mods:dateCreated>
-	</mods:originInfo>','')}}
+	{{forNonBlank(cells["Date Created"].value + cells["Display Date"].value,v,'<mods:originInfo>','')}}
+		{{forNonBlank(cells['Date Created'].value,v,'<mods:dateCreated encoding="edtf">' + v.escape('xml') + '</mods:dateCreated>','')}}
+		{{forNonBlank(cells['Display Date'].value,v,'<mods:displayDate>' + v.escape('xml') + '</mods:displayDate>','')}}
+	{{forNonBlank(cells["Date Created"].value + cells["Display Date"].value,v,'</mods:originInfo>','')}}
 	{{forNonBlank(cells['Source Media Identifier'].value,v,'<mods:relatedItem type="original">
 		<mods:identifier displayLabel="Source Media Identifier">' + v.escape('xml') + '</mods:identifier>
 	</mods:relatedItem>','')}}
