@@ -22,6 +22,10 @@ Upload the CSV to OpenRefine. On the **Create Project** page, make sure **Charac
 
 ![Create Project in OpenRefine](screenshots/parse-data-as.PNG)
 
+Also make sure to uncheck the **Store blank cells as nulls** box.
+
+![Uncheck store blank as null](screenshots/store-blank-as-null.PNG)
+
 If the preview looks good, select **Create Project**.
 
 ![Sample CSV in OpenRefine](screenshots/OR-CSV-upload.PNG)
