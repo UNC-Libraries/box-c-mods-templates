@@ -1,0 +1,27 @@
+<!-- For Prefix -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<bulkMetadata>
+
+<!-- For Row Template -->
+
+{{"<object pid=\"" + cells['PID'].value + "\">"}}
+<datastream type="md_descriptive" operation="update">
+<mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	{{forNonBlank(cells['Object'].value,v,'<mods:titleInfo><mods:title>' + v.escape('xml') + '</mods:title></mods:titleInfo>','')}}
+	{{forNonBlank(cells['Hook ID'].value,v,'<mods:identifier displayLabel="HookID" type="local">' + v.escape('xml') + '</mods:identifier>','')}}
+	{{forNonBlank(cells['Container Type'].value,v,'<mods:physicalDescription><mods:note displayLabel="Container type">' + v.escape('xml') + '</mods:note></mods:physicalDescription>','')}}
+	{{forNonBlank(cells['Location in collection'].value,v,'<mods:relatedItem type="series" displayLabel="Location in Collection"><mods:titleInfo><mods:title>' + v.escape('xml') + '</mods:title></mods:titleInfo></mods:relatedItem>','')}}
+	{{forNonBlank(cells['Citation'].value,v,'<mods:note type="citation/reference" displayLabel="Citation">' + v.escape('xml') + '</mods:note>','')}}
+	{{forNonBlank(cells["Date Created"].value + cells["Display Date"].value,v,'<mods:originInfo>','')}}
+		{{forNonBlank(cells['Date Created'].value,v,'<mods:dateCreated encoding="edtf">' + v.escape('xml') + '</mods:dateCreated>','')}}
+		{{forNonBlank(cells['Display Date'].value,v,'<mods:displayDate>' + v.escape('xml') + '</mods:displayDate>','')}}
+	{{forNonBlank(cells["Date Created"].value + cells["Display Date"].value,v,'</mods:originInfo>','')}}
+	{{forNonBlank(cells['Resource Type'].value,v,'<mods:typeOfResource>' + v.escape('xml') + '</mods:typeOfResource>','')}}
+</mods:mods>
+</datastream>
+</object>
+
+<!-- Row Separator: line break -->
+
+</bulkMetadata>
