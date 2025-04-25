@@ -8,73 +8,65 @@
 {{"<object pid=\"" + cells['PID'].value + "\">"}}
 <datastream type="md_descriptive" operation="update">
 <mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	{{forNonBlank(cells['Contributor 1 (Participant) Name'].value,v,'<mods:name type="personal">
-		<mods:namePart>' + v.escape('xml') + '</mods:namePart>
+	<mods:name type="personal"><mods:namePart>{{cells['Interviewee 1'].value.trim().escape('xml')}}</mods:namePart><mods:role><mods:roleTerm type="text" authority="marcrelator">Interviewee</mods:roleTerm></mods:role>
+	{{forNonBlank(cells["Gender Identity, Sexuality (Interviewee 1)"].value + cells["Ethnic or Racial Identity (Interviewee 1)"].value + cells["Pronouns (Interviewee 1)"].value + cells["Age at recording (Interviewee 1)"].value + cells["Participant Correct Spelling (Interviewee 1)"].value,v,'','</mods:name>')}}
+		{{forNonBlank(cells["Gender Identity, Sexuality (Interviewee 1)"].value,v,'<mods:description>Gender Identity, Sexuality: ' + v.trim().escape('xml') + '</mods:description>','')}}
+		{{forNonBlank(cells["Ethnic or Racial Identity (Interviewee 1)"].value,v,'<mods:description>Ethnic or Racial Identity: ' + v.trim().escape('xml') + '</mods:description>','')}}
+		{{forNonBlank(cells["Pronouns (Interviewee 1)"].value,v,'<mods:description>Pronouns: ' + v.trim().escape('xml') + '</mods:description>','')}}
+		{{forNonBlank(cells["Age at recording (Interviewee 1)"].value,v,'<mods:description>Age at recording: ' + v.trim().escape('xml') + '</mods:description>','')}}
+		{{forNonBlank(cells["Participant Correct Spelling (Interviewee 1)"].value,v,'<mods:description>Participant Correct Spelling: ' + v.trim().escape('xml') + '</mods:description>','')}}
+	{{forNonBlank(cells["Gender Identity, Sexuality (Interviewee 1)"].value + cells["Ethnic or Racial Identity (Interviewee 1)"].value + cells["Pronouns (Interviewee 1)"].value + cells["Age at recording (Interviewee 1)"].value + cells["Participant Correct Spelling (Interviewee 1)"].value,v,'</mods:name>','')}}
+	{{forNonBlank(cells['Interviewee 2'].value + cells["Gender Identity, Sexuality (Interviewee 2)"].value + cells["Ethnic or Racial Identity (Interviewee 2)"].value + cells["Pronouns (Interviewee 2)"].value + cells["Age at recording (Interviewee 2)"].value + cells["Participant Correct Spelling (Interviewee 2)"].value,v,'<mods:name type="personal">','')}}
+		{{forNonBlank(cells['Interviewee 2'].value,v,'<mods:namePart>' + v.escape('xml') + '</mods:namePart><mods:role><mods:roleTerm type="text" authority="marcrelator">Interviewee</mods:roleTerm></mods:role>','')}}
+		{{forNonBlank(cells["Gender Identity, Sexuality (Interviewee 2)"].value,v,'<mods:description>Gender Identity, Sexuality: ' + v.trim().escape('xml') + '</mods:description>','')}}
+		{{forNonBlank(cells["Ethnic or Racial Identity (Interviewee 2)"].value,v,'<mods:description>Ethnic or Racial Identity: ' + v.trim().escape('xml') + '</mods:description>','')}}
+		{{forNonBlank(cells["Pronouns (Interviewee 2)"].value,v,'<mods:description>Pronouns: ' + v.trim().escape('xml') + '</mods:description>','')}}
+		{{forNonBlank(cells["Age at recording (Interviewee 2)"].value,v,'<mods:description>Age at recording: ' + v.trim().escape('xml') + '</mods:description>','')}}
+		{{forNonBlank(cells["Participant Correct Spelling (Interviewee 2)"].value,v,'<mods:description>Participant Correct Spelling: ' + v.trim().escape('xml') + '</mods:description>','')}}
+	{{forNonBlank(cells['Interviewee 2'].value + cells["Gender Identity, Sexuality (Interviewee 2)"].value + cells["Ethnic or Racial Identity (Interviewee 2)"].value + cells["Pronouns (Interviewee 2)"].value + cells["Age at recording (Interviewee 2)"].value + cells["Participant Correct Spelling (Interviewee 2)"].value,v,'</mods:name>','')}}
+	{{forNonBlank(cells['Interviewee 3'].value + cells["Gender Identity, Sexuality (Interviewee 3)"].value + cells["Ethnic or Racial Identity (Interviewee 3)"].value + cells["Pronouns (Interviewee 3)"].value + cells["Age at recording (Interviewee 3)"].value + cells["Participant Correct Spelling (Interviewee 3)"].value,v,'<mods:name type="personal">','')}}
+		{{forNonBlank(cells['Interviewee 3'].value,v,'<mods:namePart>' + v.escape('xml') + '</mods:namePart><mods:role><mods:roleTerm type="text" authority="marcrelator">Interviewee</mods:roleTerm></mods:role>','')}}
+		{{forNonBlank(cells["Gender Identity, Sexuality (Interviewee 3)"].value,v,'<mods:description>Gender Identity, Sexuality: ' + v.trim().escape('xml') + '</mods:description>','')}}
+		{{forNonBlank(cells["Ethnic or Racial Identity (Interviewee 3)"].value,v,'<mods:description>Ethnic or Racial Identity: ' + v.trim().escape('xml') + '</mods:description>','')}}
+		{{forNonBlank(cells["Pronouns (Interviewee 3)"].value,v,'<mods:description>Pronouns: ' + v.trim().escape('xml') + '</mods:description>','')}}
+		{{forNonBlank(cells["Age at recording (Interviewee 3)"].value,v,'<mods:description>Age at recording: ' + v.trim().escape('xml') + '</mods:description>','')}}
+		{{forNonBlank(cells["Participant Correct Spelling (Interviewee 3)"].value,v,'<mods:description>Participant Correct Spelling: ' + v.trim().escape('xml') + '</mods:description>','')}}
+	{{forNonBlank(cells['Interviewee 3'].value + cells["Gender Identity, Sexuality (Interviewee 3)"].value + cells["Ethnic or Racial Identity (Interviewee 3)"].value + cells["Pronouns (Interviewee 3)"].value + cells["Age at recording (Interviewee 3)"].value + cells["Participant Correct Spelling (Interviewee 3)"].value,v,'</mods:name>','')}}
+	{{forNonBlank(cells['Interviewer 1'].value,v,'<mods:name type="personal">
+		<mods:namePart>' + v.trim().escape('xml') + '</mods:namePart>
 		<mods:role>
-			<mods:roleTerm type="text" authority="marcrelator">Interviewee</mods:roleTerm>
-		</mods:role>','')}}
-		{{forNonBlank(cells['Gender Identity, Sexuality (Contributor 1)'].value,v,'<mods:description>Gender Identity, Sexuality: ' + v.escape('xml') + '</mods:description>','')}}
-		{{forNonBlank(cells['Ethnic or Racial Identity (Contributor 1)'].value,v,'<mods:description>Ethnic or Racial Identity: ' + v.escape('xml') + '</mods:description>','')}}
-		{{forNonBlank(cells['Pronouns (Contributor 1)'].value,v,'<mods:description>Pronouns: ' + v.escape('xml') + '</mods:description>','')}}
-		{{forNonBlank(cells['Age at recording (Contributor 1)'].value,v,'<mods:description>Age at recording: ' + v.escape('xml') + '</mods:description>','')}}
-		{{forNonBlank(cells['Participant Correct Spelling (Contributor 1)'].value,v,'<mods:description>Participant Correct Spelling: ' + v.escape('xml') + '</mods:description>
-	</mods:name>','</mods:name>')}}
-	{{forNonBlank(cells['Contributor 2 (Participant) Name'].value,v,'<mods:name type="personal">
-		<mods:namePart>' + v.escape('xml') + '</mods:namePart>
-		<mods:role>
-			<mods:roleTerm type="text" authority="marcrelator">Interviewee</mods:roleTerm>
-		</mods:role>','')}}
-		{{forNonBlank(cells['Gender Identity, Sexuality (Contributor 2)'].value,v,'<mods:description>Gender Identity, Sexuality: ' + v.escape('xml') + '</mods:description>','')}}
-		{{forNonBlank(cells['Ethnic or Racial Identity (Contributor 2)'].value,v,'<mods:description>Ethnic or Racial Identity: ' + v.escape('xml') + '</mods:description>','')}}
-		{{forNonBlank(cells['Pronouns (Contributor 2)'].value,v,'<mods:description>Pronouns: ' + v.escape('xml') + '</mods:description>','')}}
-		{{forNonBlank(cells['Age at recording (Contributor 2)'].value,v,'<mods:description>Age at recording: ' + v.escape('xml') + '</mods:description>','')}}
-		{{forNonBlank(cells['Participant Correct Spelling (Contributor 2)'].value,v,'<mods:description>Participant Correct Spelling: ' + v.escape('xml') + '</mods:description>
-	</mods:name>','</mods:name>')}}
-	{{forNonBlank(cells['Contributor 3 (Participant) Name'].value,v,'<mods:name type="personal">
-		<mods:namePart>' + v.escape('xml') + '</mods:namePart>
-		<mods:role>
-			<mods:roleTerm type="text" authority="marcrelator">Interviewee</mods:roleTerm>
-		</mods:role>','')}}
-		{{forNonBlank(cells['Gender Identity, Sexuality (Contributor 3)'].value,v,'<mods:description>Gender Identity, Sexuality: ' + v.escape('xml') + '</mods:description>','')}}
-		{{forNonBlank(cells['Ethnic or Racial Identity (Contributor 3)'].value,v,'<mods:description>Ethnic or Racial Identity: ' + v.escape('xml') + '</mods:description>','')}}
-		{{forNonBlank(cells['Pronouns (Contributor 3)'].value,v,'<mods:description>Pronouns: ' + v.escape('xml') + '</mods:description>','')}}
-		{{forNonBlank(cells['Age at recording (Contributor 3)'].value,v,'<mods:description>Age at recording: ' + v.escape('xml') + '</mods:description>','')}}
-		{{forNonBlank(cells['Participant Correct Spelling (Contributor 3)'].value,v,'<mods:description>Participant Correct Spelling: ' + v.escape('xml') + '</mods:description>
-	</mods:name>','</mods:name>')}}
-	{{forNonBlank(cells['Producer'].value,v,'<mods:name type="corporate">
-		<mods:namePart>' + v.escape('xml') + '</mods:namePart>
-		<mods:role>
-			<mods:roleTerm type="text" authority="marcrelator">Producer</mods:roleTerm>
+			<mods:roleTerm type="text" authority="marcrelator">Interviewer</mods:roleTerm>
 		</mods:role>
 	</mods:name>','')}}
-	{{forNonBlank(cells['Facilitator/Recorder'].value,v,'<mods:name type="personal">
-		<mods:namePart>' + v.escape('xml') + '</mods:namePart>
+	{{forNonBlank(cells['Interviewer 2'].value,v,'<mods:name type="personal">
+		<mods:namePart>' + v.trim().escape('xml') + '</mods:namePart>
+		<mods:role>
+			<mods:roleTerm type="text" authority="marcrelator">Interviewer</mods:roleTerm>
+		</mods:role>
+	</mods:name>','')}}
+	{{forNonBlank(cells['Interviewer 3'].value,v,'<mods:name type="personal">
+		<mods:namePart>' + v.trim().escape('xml') + '</mods:namePart>
 		<mods:role>
 			<mods:roleTerm type="text" authority="marcrelator">Interviewer</mods:roleTerm>
 		</mods:role>
 	</mods:name>','')}}
 	{{forNonBlank(cells['Title'].value,v,'<mods:titleInfo>
-		<mods:title>' + v.escape('xml') + '</mods:title>
+		<mods:title>' + v.trim().escape('xml') + '</mods:title>
 	</mods:titleInfo>','')}}
-	{{forNonBlank(cells['Description'].value,v,'<mods:abstract>' + v.escape('xml') + '</mods:abstract>','')}}
-	{{forNonBlank(cells['Place of Interview'].value,v,'<mods:note displayLabel="Place of Interview">' + v.escape('xml') + '</mods:note>','')}}
-	{{forNonBlank(cells['Keywords'].value,v,'<mods:note displayLabel="Keywords">' + v.escape('xml') + '</mods:note>','')}}
-	{{forNonBlank(cells['Locations'].value,v,'<mods:note displayLabel="Locations">' + v.escape('xml') + '</mods:note>','')}}
-	{{forNonBlank(cells['Subjects'].value,v,'<mods:subject>
-		<mods:topic>' + v.escape('xml') + '</mods:topic>
-	</mods:subject>','')}}
-	{{forNonBlank(cells['Extent'].value,v,'<mods:physicalDescription displayLabel="Duration">
-		<mods:extent unit="hours">' + v.escape('xml') + '</mods:extent>
-	</mods:physicalDescription>','')}}
-	{{forNonBlank(cells['Created Date'].value,v,'<mods:originInfo>
-		<mods:dateCreated encoding="edtf">' + v.escape('xml') + '</mods:dateCreated>
-	</mods:originInfo>','')}}
-	{{forNonBlank(cells['Genre'].value,v,'<mods:genre authority="lcgft">' + v.escape('xml') + '</mods:genre>','')}}
-	{{forNonBlank(cells['Collection Number'].value,v,'<mods:identifier displayLabel="Collection Number" type="local">' + v.escape('xml') + '</mods:identifier>','')}}
-	{{forNonBlank(cells['Notes'].value,v,'<mods:note>' + v.escape('xml') + '</mods:note>','')}}
-	{{forNonBlank(cells['Rights'].value,v,'<mods:accessCondition displayLabel="License" type="use and reproduction" xlink:href="https://creativecommons.org/licenses/by-nc-sa/4.0/">' + v.escape('xml') + '</mods:accessCondition>','')}}
-	{{forNonBlank(cells['Digital Folder number'].value,v,'<mods:identifier displayLabel="Digital Folder Number" type="local">' + v.escape('xml') + '</mods:identifier>','')}}
-	{{forNonBlank(cells['Language'].value.split('; '), v, forEach(v,w,'<mods:language><mods:languageTerm authority="iso639-2b" type="code">' + w.escape('xml') + '</mods:languageTerm></mods:language>').join(''), '')}}
+	{{forNonBlank(cells['Abstract'].value,v,'<mods:abstract>' + v.trim().escape('xml') + '</mods:abstract>','')}}
+	{{forNonBlank(cells['Place of Interview'].value,v,'<mods:note displayLabel="Place of Interview">' + v.trim().escape('xml') + '</mods:note>','')}}
+	{{forNonBlank(cells['Keywords'].value,v,'<mods:note displayLabel="Keywords">' + v.trim().escape('xml') + '</mods:note>','')}}
+	{{forNonBlank(cells['Locations'].value,v,'<mods:note displayLabel="Locations">' + v.trim().escape('xml') + '</mods:note>','')}}
+	{{forNonBlank(cells['Subjects'].value,v,'<mods:subject><mods:topic>' + v.trim().escape('xml') + '</mods:topic></mods:subject>','')}}
+	{{forNonBlank(cells['Duration'].value,v,'<mods:physicalDescription displayLabel="Duration"><mods:extent unit="hours">' + v.trim().escape('xml') + '</mods:extent></mods:physicalDescription>','')}}
+	{{forNonBlank(cells['Created Date'].value,v,'<mods:originInfo><mods:dateCreated encoding="edtf">' + v.trim().escape('xml') + '</mods:dateCreated></mods:originInfo>','')}}
+	{{forNonBlank(cells['Notes'].value,v,'<mods:note>' + v.trim().escape('xml') + '</mods:note>','')}}
+	{{forNonBlank(cells['Digital Folder Number'].value,v,'<mods:identifier displayLabel="Digital Folder Number" type="local">' + v.trim().escape('xml') + '</mods:identifier>','')}}
+	{{forNonBlank(cells['Language'].value.split('; '), v, forEach(v,w,'<mods:language><mods:languageTerm authority="iso639-2b" type="code">' + w.trim().escape('xml') + '</mods:languageTerm></mods:language>').join(''), '')}}
+	<mods:name type="corporate"><mods:namePart>UNC Libraries</mods:namePart><mods:role><mods:roleTerm authority="marcrelator" type="text">Producer</mods:roleTerm></mods:role></mods:name>
+	<mods:genre authority="lcgft">Oral histories</mods:genre>
+	<mods:identifier displayLabel="Collection Number" type="local">70096</mods:identifier>
+	<mods:accessCondition displayLabel="License" type="use and reproduction" xlink:href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</mods:accessCondition>
 	<mods:typeOfResource>sound recording-nonmusical</mods:typeOfResource>
 </mods:mods>
 </datastream>
