@@ -18,9 +18,9 @@ In the Encoding menu, select "Convert to UTF-8". Confirm that bottom right corne
 ![Convert to UTF-8 in Notepad++](screenshots/npp-removeBOM.PNG)
 
 ## Upload CSV to OpenRefine
-Upload the CSV to OpenRefine. On the **Create Project** page, make sure **Character encoding** is UTF-8 and Commas (CSV) is selected under **Columns are separated by**.
+Upload the CSV to OpenRefine. On the **Create Project** page, make sure **Character encoding** is UTF-8, Commas (CSV) is selected under **Columns are separated by**, and check the **Trim leading & trailing whitespace from strings** box.
 
-![Create Project in OpenRefine](screenshots/parse-data-as.PNG)
+![Create Project in OpenRefine](screenshots/parse-data-as2.PNG)
 
 Also make sure to uncheck the **Store blank cells as nulls** box.
 
